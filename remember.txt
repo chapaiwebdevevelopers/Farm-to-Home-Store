@@ -1,0 +1,2 @@
+The active category link should look different in Navbar
+

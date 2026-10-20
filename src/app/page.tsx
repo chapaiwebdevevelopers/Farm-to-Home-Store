@@ -1,10 +1,14 @@
-import Image from "next/image";
+import AllProducts from "@/components/home/AllProducts";
+import Banner from "@/components/home/Banner";
+import PriceTrends from "@/components/home/PriceTrends";
+
 
 export default function Home() {
   return (
-    <main>
-        <h1 className="text-5xl">বাজার দর</h1>
-      
+    <main className="container mx-auto">
+        <Banner></Banner>
+        <PriceTrends></PriceTrends>
+        <AllProducts></AllProducts>
       </main>
   );
 }

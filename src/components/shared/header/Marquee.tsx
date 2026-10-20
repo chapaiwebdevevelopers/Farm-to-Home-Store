@@ -1,5 +1,6 @@
 // "use client"
-import { ItemInterface } from "@/type/type";
+import { IProduct } from "@/type/type";
+import Link from "next/link";
 import React from "react";
 import MarqueeText from "react-marquee-text";
 import "react-marquee-text/dist/styles.css";
@@ -13,17 +14,18 @@ const getProudcts = async () => {
 
 const Marquee = async () => {
       const products = await getProudcts();
-      console.log(products);
+      // console.log(products);
       return (
-            <div className="bg-base-100 border-b-1 border-gray-100 py-2">
+            <div className="bg-base-100   border-b-1 border-gray-100 py-2">
                   <ul>
                         <MarqueeText
                               direction="right"
                               duration={15}
                               pauseOnHover={true}
                         >
-                              {products.map((product: ItemInterface) => (
+                              {products.map((product: IProduct) => (
                                     <li className="px-3" key={product.id}>
+                                        
                                           {product.image}
                                           {product.nameBn}
                                           {product.today} টাকা/{product.unit}

@@ -1,6 +1,5 @@
 import React from 'react';
 import NavLogo from './header/NavLogo';
-import PrimaryNav from './header/PrimaryNav';
 import Marquee from './header/Marquee';
 
 const Header = () => {

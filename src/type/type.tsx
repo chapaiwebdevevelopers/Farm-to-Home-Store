@@ -1,4 +1,4 @@
-export interface ItemInterface{
+export interface IProduct{
     id:number,
     slug:string,
     nameBn: string,
@@ -13,5 +13,12 @@ export interface ItemInterface{
     lastMonth: number,
     change: {
       dir: string,
-      pct: number}
+      pct: number},
+    markets: 
+      {
+        market: string,
+        division: string,
+        min: number,
+        max: number
+      }[]
 }

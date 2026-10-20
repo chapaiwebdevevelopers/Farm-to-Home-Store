@@ -1,16 +1,12 @@
 // 'use client'
 import Image from "next/image";
 import Link from "next/link";
+
 import React from "react";
+import ActiveLinks from "./activeLinks";
 
-interface ICategory{
-    id: string,
-    slug:string,
-    nameBn: string,
-    icon: string
 
-}
-const categoryMenu = async()=>{
+const getCategory = async()=>{
       const response = await fetch('https://openapi.programming-hero.com/api/bazardor/categories');
       return response.json();
 }
@@ -22,15 +18,16 @@ const bdDate = new Date().toLocaleDateString("bn-BD", {
       day: "numeric",
 });
 const NavLogo = async() => {
-      const links = await categoryMenu();
-      // console.log(links)
+      const links = await getCategory();
+      
+      console.log("Navlinks API",links)
       return (
             <>
                   <div className="bg-base-100 border-b-1 border-gray-100">
-                        <div className="navbar container mx-auto ">
-                              <div className="navbar-start">
+                        <div className="navbar container mx-auto   ">
+                              <div className="navbar-start ">
                                     <Link
-                                          className="flex items-center "
+                                          className="flex items-center  "
                                           href="/"
                                     >
                                           <span className="text-3xl bg-green-700 rounded-xl flex items-center justify-center p-1 mr-3">
@@ -48,7 +45,7 @@ const NavLogo = async() => {
                                           </div>
                                     </Link>
                               </div>
-                              <div className="navbar-end space-x-3">
+                              <div className="navbar-end space-x-3 ">
                                     <Link href="/signin">
                                           <button className="btn">
                                                 সাইন ইন
@@ -67,13 +64,7 @@ const NavLogo = async() => {
                   <div className="container mx-auto border-b-1 border-gray-100">
                         <div className="navbar-center">
                               <ul className="menu menu-horizontal px-1">
-                                     {
-                                          links.map((link:ICategory,i:number)=>
-                                          <li key={i}>
-                                                <Link href={link.slug}><button>{link.icon} {link.nameBn}</button></Link>
-                                          </li>
-                                          )
-                                    }
+                                    <ActiveLinks links={links}></ActiveLinks>
                               </ul>
                         </div>
                   </div>
