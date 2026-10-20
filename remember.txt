@@ -1,2 +1,2 @@
-The active category link should look different in Navbar
-
+1. 🔝 Navbar
+Right-side auth buttons: সাইন ইন + সাইন আপ. When logged in, show profile / sign-out instead.

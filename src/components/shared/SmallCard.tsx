@@ -10,7 +10,7 @@ const SmallCard = ({ product }: SmallCardProps) => {
       // console.log(product);
 
       return (
-            <Link href={ `/product/${product.category}`}>
+            <Link href={ `/product/${product.id}`}>
                             <div className="card w-full  rounded-2xl border border-[#dce5dd] hover:border-[#028411] bg-[#fbfdfb] shadow-none">
                   <div className="card-body gap-0 p-4">
                         {/* Product Info */}

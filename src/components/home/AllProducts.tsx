@@ -32,9 +32,8 @@ const AllProducts = ({products}:productsProps) => {
       // console.log(sortProduct(products))
       // console.log(sortBy)
       return (
-            <div className="my-10 space-y-2">
-                  <h2 className="text-4xl">সব পণ্য</h2>
-                  <div className="flex justify-between">
+            <div> 
+                  <div className="flex justify-between my-3">
                         <p>মোট {products.length} টি পণ্য দেখানো হচ্ছে</p>
                         <div className="flex items-center space-x-4">
                               <p>সাজান </p>

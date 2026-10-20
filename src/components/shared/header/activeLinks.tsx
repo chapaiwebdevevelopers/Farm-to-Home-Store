@@ -1,30 +1,29 @@
 "use client";
+import { ICategory } from "@/type/type";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import path from "path";
-import React from "react";
-interface ICategory {
-      id: string;
-      slug: string;
-      nameBn: string;
-      icon: string;
+
+
+interface linksProps{
+      links:ICategory[]
 }
-const ActiveLinks = ({ links }) => {
-      const pathName = usePathname().replace(/\//g, "");
+const ActiveLinks = ({ links }:linksProps) => {
+      const pathName = usePathname();
+      // console.log(links)
 
       // const isActive =links[0].slug === pathName;
-      // console.log(isActive)
+      // console.log(pathName)
       return (
             <>
                   {links.map((link: ICategory, i: number) => (
                         <li key={i}>
                               <Link
                                     className={
-                                          link.slug === pathName
+                                          `/categories/${link.slug}` === pathName
                                                 ? "bg-green-700 text-white"
                                                 : ""
                                     }
-                                    href={link.slug}
+                                    href={`/categories/${link.slug}`}
                               >
                                     <button>
                                           {link.icon} {link.nameBn}

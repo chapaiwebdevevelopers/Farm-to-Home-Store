@@ -15,7 +15,11 @@ export default async function Home() {
     <main className="container mx-auto">
         <Banner></Banner>
         <PriceTrends key={products.index} products={products}></PriceTrends>
+        <div id="allproduct" className="my-10 space-y-2">
+                  <h2 className="text-4xl">সব পণ্য</h2>
         <AllProducts  key={products.index} products={products}></AllProducts>
+        </div>
+            
       </main>
   );
 }
