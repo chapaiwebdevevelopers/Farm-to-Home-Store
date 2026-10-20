@@ -26,9 +26,9 @@ const Marquee = async () => {
                               {products.map((product: IProduct) => (
                                     <li className="px-3" key={product.id}>
                                         
-                                          {product.image}
+                                          {product.image}  
                                           {product.nameBn}
-                                          {product.today} টাকা/{product.unit}
+                                           {product.today} টাকা/{product.unit}
                                           {product.change.pct > 0 ? (
                                                 <span className="text-red-500">
                                                       ▲{" "}

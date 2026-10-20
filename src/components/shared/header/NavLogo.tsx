@@ -20,7 +20,7 @@ const bdDate = new Date().toLocaleDateString("bn-BD", {
 const NavLogo = async() => {
       const links = await getCategory();
       
-      console.log("Navlinks API",links)
+      // console.log("Navlinks API",links)
       return (
             <>
                   <div className="bg-base-100 border-b-1 border-gray-100">

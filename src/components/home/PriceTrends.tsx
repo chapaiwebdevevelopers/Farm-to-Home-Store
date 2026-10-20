@@ -2,15 +2,19 @@ import React from "react";
 import SmallCard from "../shared/SmallCard";
 import { IProduct } from "@/type/type";
 
-const getProduct = async () => {
-      const response = await fetch(
-            "https://openapi.programming-hero.com/api/bazardor/products",
-      );
-      return response.json();
-};
+// const getProduct = async () => {
+//       const response = await fetch(
+//             "https://openapi.programming-hero.com/api/bazardor/products",
+//       );
+//       return response.json();
+// };
 
-const PriceTrends = async () => {
-      const products = await getProduct();
+interface productsProps{
+      products: IProduct[]
+}
+
+const PriceTrends =  ({products}:productsProps) => {
+      // const products = await getProduct();
       //   console.log(products);
 
       return (

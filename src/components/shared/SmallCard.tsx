@@ -7,7 +7,7 @@ interface SmallCardProps {
 }
 
 const SmallCard = ({ product }: SmallCardProps) => {
-      console.log(product);
+      // console.log(product);
 
       return (
             <Link href={ `/product/${product.category}`}>
