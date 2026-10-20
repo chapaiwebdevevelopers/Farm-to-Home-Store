@@ -1,7 +1,11 @@
 import AllProducts from "@/components/home/AllProducts";
 import React from "react";
-
-const SingleCategory = async ({ params }) => {
+type CategoryProps = {
+  params: Promise<{
+    categoriesId: string;
+  }>;
+};
+const SingleCategory = async ({ params }:CategoryProps) => {
       const { categoriesId } = await params;
     const [categoryRes,productRes]= await Promise.all([
         fetch(`https://openapi.programming-hero.com/api/bazardor/categories/${categoriesId}`),
