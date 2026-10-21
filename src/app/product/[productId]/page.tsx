@@ -1,12 +1,18 @@
 import Link from "next/link";
-import { notFound, redirect } from "next/navigation";
-import React from "react";
+import { notFound } from "next/navigation";
 
 type SingleProductProps = {
       params: Promise<{
             productId: string;
       }>;
 };
+
+type marketType = {
+ division: string;
+ market: string;
+ max: number;
+ min: number;
+}
 
 const SingleProductDetails = async ({ params }: SingleProductProps) => {
       const { productId } = await params;
@@ -17,8 +23,8 @@ const SingleProductDetails = async ({ params }: SingleProductProps) => {
       if (product.error === "Not found") {
   notFound();
 }
-      const {markets}= product
-      console.log(product);
+      const {markets}:{markets:marketType[]}= product
+      console.log(markets);
      
       //Help from Others(Samiul) it's Copyable
       const allMins = product.markets.map((m: { min: number }) => m.min);
