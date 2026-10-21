@@ -16,8 +16,8 @@ const SingleProductDetails = async ({ params }: SingleProductProps) => {
       const {markets}= product
       console.log(markets);
       //Help from Others(Samiul) it's Copyable
-      const allMins = product.markets.map((m: number) => m.min);
-      const allMaxs = product.markets.map((m: number) => m.max);
+      const allMins = product.markets.map((m) => m.min);
+      const allMaxs = product.markets.map((m) => m.max);
       const minPrice = Math.min(...allMins);
       const maxPrice = Math.max(...allMaxs);
       const avgPrice = Math.round(

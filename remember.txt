@@ -1,2 +1,4 @@
 1. 🔝 Navbar
 Right-side auth buttons: সাইন ইন + সাইন আপ. When logged in, show profile / sign-out instead.
+
+Single Product page details the not found page not showing

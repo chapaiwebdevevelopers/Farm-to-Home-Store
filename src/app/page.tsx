@@ -1,6 +1,7 @@
 import AllProducts from "@/components/home/AllProducts";
 import Banner from "@/components/home/Banner";
 import PriceTrends from "@/components/home/PriceTrends";
+import { Suspense } from "react";
 
 const getProduct = async () => {
       const response = await fetch(
@@ -12,7 +13,8 @@ const getProduct = async () => {
 export default async function Home() {
   const products = await getProduct();
   return (
-    <main className="container mx-auto">
+    <Suspense fallback="Loading...">
+      <main className="container mx-auto">
         <Banner></Banner>
         <PriceTrends key={products.index} products={products}></PriceTrends>
         <div id="allproduct" className="my-10 space-y-2">
@@ -21,5 +23,6 @@ export default async function Home() {
         </div>
             
       </main>
+    </Suspense>
   );
 }

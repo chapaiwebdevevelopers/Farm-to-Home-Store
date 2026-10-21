@@ -1,5 +1,5 @@
 import AllProducts from "@/components/home/AllProducts";
-import React from "react";
+import React, { Suspense } from "react";
 type CategoryProps = {
   params: Promise<{
     categoriesId: string;
@@ -18,7 +18,8 @@ const SingleCategory = async ({ params }:CategoryProps) => {
     console.log(productData)
       return (
             <div className="container mx-auto my-10">
-                  <div className=" flex gap-3 items-center bg-base-100 shadow-sm p-15 my-10">
+                  {/* <Suspense > */}
+                        <div className=" flex gap-3 items-center bg-base-100 shadow-sm p-15 my-10">
                         <div className="text-5xl" >{categoryData.icon}</div>
                         <div className="">
                               <h2 className="text-4xl">{categoryData.nameBn}</h2>
@@ -29,6 +30,7 @@ const SingleCategory = async ({ params }:CategoryProps) => {
                         </div>
                   </div>
                   <AllProducts products={productData}></AllProducts>
+                  {/* </Suspense> */}
             </div>
       );
 };
