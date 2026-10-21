@@ -1,7 +1,0 @@
-
-
-Single Product page details the not found page not showing
-
-
-
-Route Setup
