@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { notFound, redirect } from "next/navigation";
 import React from "react";
 
 type SingleProductProps = {
@@ -13,8 +14,12 @@ const SingleProductDetails = async ({ params }: SingleProductProps) => {
             `https://openapi.programming-hero.com/api/bazardor/products/${productId}`,
       );
       const product = await response.json();
+      if (product.error === "Not found") {
+  notFound();
+}
       const {markets}= product
-      console.log(markets);
+      console.log(product);
+     
       //Help from Others(Samiul) it's Copyable
       const allMins = product.markets.map((m) => m.min);
       const allMaxs = product.markets.map((m) => m.max);
