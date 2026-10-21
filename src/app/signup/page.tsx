@@ -33,7 +33,7 @@ const SignUpPage = () => {
                   name: data.name,
                   email: data.email,
                   password: data.password,
-                  callbackURL: "/profile",
+                  callbackURL: "/signin",
             });
 
             console.log(signUpData, error);
