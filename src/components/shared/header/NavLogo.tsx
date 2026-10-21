@@ -4,6 +4,8 @@ import Link from "next/link";
 
 import React from "react";
 import ActiveLinks from "./activeLinks";
+import { useSession } from "@/lib/auth-client";
+import UserMenu from "./UserMenu";
 
 
 const getCategory = async()=>{
@@ -17,9 +19,13 @@ const bdDate = new Date().toLocaleDateString("bn-BD", {
       month: "short",
       day: "numeric",
 });
+
+
+
+
 const NavLogo = async() => {
       const links = await getCategory();
-      
+     
       // console.log("Navlinks API",links)
       return (
             <>
@@ -46,18 +52,7 @@ const NavLogo = async() => {
                                     </Link>
                               </div>
                               <div className="navbar-end space-x-3 ">
-                                    <Link href="/signin">
-                                          <button className="btn">
-                                                সাইন ইন
-                                          </button>
-                                    </Link>
-
-                                    <Link href="/signup">
-                                          {" "}
-                                          <button className="btn  bg-green-700 text-white ">
-                                                সাইন আপ
-                                          </button>{" "}
-                                    </Link>
+                                  <UserMenu></UserMenu>
                               </div>
                         </div>
                   </div>

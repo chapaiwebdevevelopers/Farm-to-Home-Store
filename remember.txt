@@ -2,3 +2,17 @@
 Right-side auth buttons: সাইন ইন + সাইন আপ. When logged in, show profile / sign-out instead.
 
 Single Product page details the not found page not showing
+
+
+
+{
+    "token": "zO4GeetojDyiom65KCPlTgTqtEgizNHt",
+    "user": {
+        "name": "Abc2@gmail.com",
+        "email": "abc2@gmail.com",
+        "emailVerified": false,
+        "createdAt": "2026-10-21T10:01:03.243Z",
+        "updatedAt": "2026-10-21T10:01:03.243Z",
+        "id": "6ad88d5f704c829b35f2cff2"
+    }
+}

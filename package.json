@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@better-auth/mongo-adapter": "^1.7.12",
+    "@heroui/react": "^3.2.6",
+    "@heroui/styles": "^3.2.6",
     "@tailwindcss/postcss": "^4.3.3",
     "better-auth": "^1.7.12",
     "daisyui": "^5.7.50",
@@ -17,9 +19,11 @@
     "next": "16.4.2",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "react-marquee-text": "^1.0.6"
+    "react-marquee-text": "^1.0.6",
+    "react-toastify": "^11.1.0"
   },
   "devDependencies": {
+    "@gravity-ui/icons": "^2.23.0",
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
